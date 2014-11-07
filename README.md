@@ -53,8 +53,8 @@ bam_to_bigwig.py BAM_FILE [BAM_FILE ...]
     * cp rsem-bam2wig /usr/local/bin
 
 # Authors
+```
 Han Lin, 2014.
-
 Biomedical Electronics and Bioinformatics, National Taiwan University
-
 National Agricultural Library, ARS, USDA
+```
