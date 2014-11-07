@@ -54,5 +54,7 @@ bam_to_bigwig.py BAM_FILE [BAM_FILE ...]
 
 # Authors
 Han Lin, 2014.
+
 Biomedical Electronics and Bioinformatics, National Taiwan University
+
 National Agricultural Library, ARS, USDA
