@@ -252,7 +252,7 @@ def main(bam_filename, bigwig_filename=None, use_tempfile=False, keep_tempfile=F
     sys.stdout.write('Building wig file: %s ...\n' % wig_filename)
     if not bam_to_wig(bam_filename, wig_filename, ignore_secondary, ignore_qc_fail, ignore_optical_pcr_duplicate, ignore_supplementary):
         sys.exit(1)
-    sys.stdout.write('Done\n' % wig_filename)
+    sys.stdout.write('Done\n')
     
     # generate sizes file
     chr_sizes_filename = '%s.sizes' % file_prefix
