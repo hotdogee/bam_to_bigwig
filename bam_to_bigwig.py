@@ -146,7 +146,7 @@ def bam_to_wig(bam_filename, wig_filename, ignore_secondary=False, ignore_qc_fai
     file_prefix = os.path.splitext(bam_filename)[0]
     if not wig_filename:
         wig_filename = '%s.wig' % file_prefix
-    # check if we have permissions to write wig_filename if file exists or write its directory
+    # check if we have permissions to write wig_filename if file exists or permissions to write its directory to create it
     if os.path.isfile(wig_filename):
         if not os.access(wig_filename, os.W_OK):
             log.critical('Write permission denied: %s' % (os.path.abspath(wig_filename)))
@@ -203,14 +203,14 @@ def bam_to_sizes(bam_filename, chr_sizes_filename):
     else:
         with fp:
             for chrom, size in chr_sizes:
-                f.write("%s\t%s\n" % (chrom, size))
+                fp.write("%s\t%s\n" % (chrom, size))
     return True
 
 def wig_to_bigwig(wig_filename, bigwig_filename, chr_sizes_filename):
     file_prefix = os.path.splitext(wig_filename)[0]
     if not bigwig_filename:
         bigwig_filename = '%s.bigwig' % file_prefix
-    # check if we have permissions to write bigwig_filename if file exists or write its directory
+    # check if we have permissions to write bigwig_filename if file exists or permissions to write its directory to create it
     if os.path.isfile(bigwig_filename):
         if not os.access(bigwig_filename, os.W_OK):
             log.critical('Write permission denied: %s' % (os.path.abspath(bigwig_filename)))
