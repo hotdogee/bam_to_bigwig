@@ -28,8 +28,8 @@ bam_to_bigwig.py BAM_FILE [BAM_FILE ...]
                         "supplementary alignment" flag bit 0x800 set.
 ```
 
-# Dependencies
-* Python 2.7 on CentOS 6 x86_64 (may work on windows if you can get the other dependencies to compile)
+# Requirements
+* Python 2.7 - Tested on CentOS 6 x86_64 (may work on windows if you can get the other dependencies to compile)
   * pysam (https://github.com/pysam-developers/pysam)
 * wigToBigWig from UCSC (http://hgdownload.cse.ucsc.edu/admin/exe/)
 * rsem-bam2wig from RSEM (http://deweylab.biostat.wisc.edu/rsem/)
@@ -37,20 +37,20 @@ bam_to_bigwig.py BAM_FILE [BAM_FILE ...]
 # Installation
 * pysam
   1. Install build dependencies
-    * CentOS: yum install python-devel zlib-devel
-    * Ubuntu: apt-get install python-dev zlib1g-dev
-  2. Install using pip
-    * pip install pysam
+    * CentOS: `yum install python-devel zlib-devel`
+    * Ubuntu: `apt-get install python-dev zlib1g-dev`
+  2. Install using [pip](http://pip.readthedocs.org/en/latest/installing.html)
+    * `pip install pysam`
 * wigToBigWig
   1. Download binary: http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/wigToBigWig
-  2. Make sure wigToBigWig is in a directory in your $PATH
-    * cp wigToBigWig /usr/local/bin
+  2. Make sure wigToBigWig is in a directory in your `$PATH`
+    * `cp wigToBigWig /usr/local/bin`
 * rsem-bam2wig
   1. Download the source code: http://deweylab.biostat.wisc.edu/rsem/
   2. Compile
-    * make
+    * `make`
   3. Make sure rsem-bam2wig is in a directory in your $PATH
-    * cp rsem-bam2wig /usr/local/bin
+    * `cp rsem-bam2wig /usr/local/bin`
 
 # Authors
 ```
